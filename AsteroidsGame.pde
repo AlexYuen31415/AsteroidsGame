@@ -1,8 +1,8 @@
 Spaceship ship;
 Star[] stars = new Star[200];
-ArrayList<Asteroid> asteroids = new ArrayList<>();
-ArrayList<Bullet> bullets = new ArrayList<>();
-ArrayList<Opps> opps = new ArrayList<>();
+ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
+ArrayList<Bullet> bullets = new ArrayList<Bullet>();
+ArrayList<Opps> opps = new ArrayList<Opps>();
 int lastshot;
 int newshot;
 int points = 0;
