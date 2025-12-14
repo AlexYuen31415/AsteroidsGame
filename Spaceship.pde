@@ -1,4 +1,8 @@
 class Spaceship extends Floater {
+  
+  public int shipHp = 10;
+  public int ammo = 5;
+  
   public Spaceship() {
     corners = 12;
     
@@ -36,6 +40,20 @@ class Spaceship extends Floater {
     myCenterX = Math.random() * 400;
     myCenterY = Math.random() * 400;
     myPointDirection = Math.random() * 360;
+  }
+  
+  public void accelerate (double dAmount)   
+  {          
+    double dRadians =myPointDirection*(Math.PI/180);     
+
+    myXspeed += (((dAmount) * Math.cos(dRadians)))/(Math.abs(myXspeed)+1);    
+    myYspeed += (((dAmount) * Math.sin(dRadians)))/(Math.abs(myYspeed)+1);       
+  }   
+  
+  public void deAccelerate (double dAmount)   
+  {          
+    myXspeed *= dAmount;    
+    myYspeed *= dAmount;       
   }
   
   public void turn ()   
