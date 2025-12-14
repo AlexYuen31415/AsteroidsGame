@@ -1,8 +1,8 @@
 class Floater //Do NOT modify the Floater class! Make changes in the Spaceship class 
 {   
   protected int corners;  //the number of corners, a triangular floater has 3   
-  protected int[] xCorners;   
-  protected int[] yCorners;   
+  protected double[] xCorners;   
+  protected double[] yCorners;   
   protected int myColor;   
   protected double myCenterX, myCenterY; //holds center coordinates   
   protected double myXspeed, myYspeed; //holds the speed of travel in the x and y directions   
@@ -65,7 +65,7 @@ class Floater //Do NOT modify the Floater class! Make changes in the Spaceship c
     beginShape();
     for (int nI = 0; nI < corners; nI++)
     {
-      vertex(xCorners[nI], yCorners[nI]);
+      vertex((float)xCorners[nI], (float)yCorners[nI]);
     }
     endShape(CLOSE);
 
